@@ -20,7 +20,7 @@ Since we know that our 2D pose is the projection of the 3D pose onto the image p
 
 <img width="350" alt="Geogebra Export" src="https://github.com/user-attachments/assets/b48b1960-715f-4b3c-ad0c-e1fb7c7e33b2">
 
-By using the offset between 2 joints in our 3D pose, (dx2,dy2,dz2), we can fit the line segment that represents this to our lines starting from (0,0,0) and passing through the coordinates on the image plane representing our first and second joints, (x1,y1,z) and (x1',y1',z'). We do this by projecting our line segment and 2 lines onto the xz plane and doing the following operations:
+By using the offset between 2 joints in our 3D pose, (dx2,dy2,dz2), we can fit the line segment that represents this to our lines starting from (0,0,0) and passing through the coordinates on the image plane representing our first and second joints, (x1,y1,z) and (x1',y1',z). We do this by projecting our line segment and 2 lines onto the xz plane and doing the following operations:
 
 <img width="350" alt="2169" src="https://github.com/user-attachments/assets/9cf3464e-618c-416c-bdc0-f53d5decb0bc">
 
