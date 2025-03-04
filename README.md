@@ -35,7 +35,7 @@ In the first attempt, I made use of the fact that projecting onto the xz plane g
 <img width="350" alt="78833" src="https://github.com/user-attachments/assets/3415922a-ed6c-41cb-ba49-5e7e7852ed48">
 
 ### Attempt 2
-In the second attempt, I used scipy’s optimize module to find the value for z that would minimize the error of the fitted 3D pose to the lines. However, I once again found that it was way too error prone and returned highly inaccurate values. . 
+In the second attempt, I used scipy’s optimize module to find the value for z that would minimize the error of the fitted 3D pose to the lines. However, I once again found that it was way too error prone and returned highly inaccurate values. 
 
 ### Attempt 3
 In the third attempt, I made use of [this 3D pose model](https://istvansarandi.com/eccv22_demo/)(that took me ages of digging to find) to find the 2D and 3D pose of the bodies in a scene. This differs from other models like mediapipe’s as it directly returns the 3D pose in camera space, thus allowing me to find the value of z that would minimize the distance of the 3D pose from the lines starting at (0,0,0) and going through the 2D pose on the image plane. The drawbacks to this model are that it seems to take ages to load and run, and thus it cannot really be used to find the 3D pose in camera space for every frame, but for our purposes this is perfect as we only need to run it once for a certain model of camera to find the distance between the camera’s origin and its image plane, since this distance should remain constant across any video. 
