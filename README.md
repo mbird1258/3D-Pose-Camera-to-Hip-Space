@@ -4,7 +4,7 @@
 Blog post: [https://matthew-bird.com/blogs/Hip-to-Camera-Space.html](https://matthew-bird.com/blogs/Hip-to-Camera-Space.html)
 
 ## Premise
-I’ve always been somewhat annoyed that many of the off-the-shelf 3D pose models, such as [mediapipe](https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker), return 3D pose coordinates that are centered around the hips, as I feel that they become almost impossible to build off of since camera space coordinates are more useful in 99% of circumstances. Thus, my plan for this project was to create an algorithm that finds the translation in 3D space that moves a body from hip space into camera space. 
+I’ve always been somewhat annoyed that many of the off-the-shelf 3D pose models, such as [mediapipe](https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker), return 3D pose coordinates that are centered around the hips, as I feel that they become almost impossible to build off of since camera space coordinates are more useful in 99% of circumstances. Thus, my plan for this project was to create an algorithm that finds the translation in 3D space that moves a body from hip space into camera space. Part of the motivation for this project was another project to make a relatively simple fall detector. (GitHub repository [here](https://github.com/mbird1258/Fall-Detection))
 
 ## Instructions for Setup
 Download pose landmarker [here](https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker/python) and rename to pose_landmarker.task 
